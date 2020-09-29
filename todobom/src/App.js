@@ -1,14 +1,16 @@
-import React, { useState } from 'react';
+import React, { useEffect, useState } from 'react';
 import Header from './components/header';
 import './App.css';
 import ToDoForm from './components/todoForm';
 import ToDoList from './components/todoList';
 
 function App() {
-  var allItems = []
-  //const [allItems, setItems] = useState([])
 
-  const [todos, setTodos] = useState([])
+  const [todos, setTodos] = useState(JSON.parse(window.localStorage.getItem('todos') || []))
+
+  useEffect(() => {
+    window.localStorage.setItem('todos', JSON.stringify(todos))
+  })
 
   const addTodo = (todo) =>{
     setTodos([todo, ...todos])

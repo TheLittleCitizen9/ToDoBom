@@ -1,0 +1,21 @@
+.todoItem{
+    font-size: large;
+    font-family: 'Calibri';
+    border-bottom-color: black;
+    border-bottom-width: 2px;
+    border-bottom-style: solid;
+    margin-top: 10px;
+}
+
+.deleteTodo{
+    font-size: small;
+    margin-left: 10px;
+}
+
+.done{
+    margin-left: 20px;
+}
+
+li {
+    list-style-type: none;
+}

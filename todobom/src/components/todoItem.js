@@ -1,4 +1,5 @@
 import React from 'react';
+import './todo.css';
 
 function TodoItem(props) {
     const onDone = () => {
@@ -9,10 +10,10 @@ function TodoItem(props) {
         props.removeTodo(props.todo.id)
     }
   return (
-    <div className="App" style={{display: "flex", textDecoration: props.todo.completed ? "line-through" : null}}>
+    <div className="todoItem" style={{display: "flex", textDecoration: props.todo.completed ? "line-through" : null}}>
         <input type="checkbox" className="done" onClick={onDone}></input>
         <li id={props.todo.id}>{props.todo.task}</li>
-        <button onClick={onRemove}>X</button>
+        <button className="deleteTodo" onClick={onRemove}>X</button>
     </div>
   );
 }

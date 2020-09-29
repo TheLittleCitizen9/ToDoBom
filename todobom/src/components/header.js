@@ -1,8 +1,9 @@
 import React from 'react';
+import './header.css';
 
 function Header() {
   return (
-    <div className="App">
+    <div className="Header">
       <h1>My ToDo List</h1>
     </div>
   );
